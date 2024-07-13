@@ -12,7 +12,7 @@ import java.util.UUID;
 public class ParticipantController {
 
     @Autowired
-    private ParticpantRepository repository;
+    private ParticipantRepository repository;
 
     @PostMapping("/{id}/confirm")
     public ResponseEntity<Participant> confirmParticipant(@PathVariable UUID id, @RequestBody ParticipantRequestPayload payload) {
