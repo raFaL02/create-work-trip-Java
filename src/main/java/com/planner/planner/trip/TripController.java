@@ -1,5 +1,6 @@
 package com.planner.planner.trip;
 
+import com.planner.planner.activities.ActivityData;
 import com.planner.planner.activities.ActivityRequestPayload;
 import com.planner.planner.activities.ActivityResponse;
 import com.planner.planner.activities.ActivityService;
@@ -95,6 +96,13 @@ public class TripController {
         return ResponseEntity.notFound().build();
     }
 
+    @GetMapping("/{id}/activities")
+    public ResponseEntity<List<ActivityData>> getAllActivties(@PathVariable UUID id) {
+        List<ActivityData> activityDataList= this.activityService.getAllActivitiesFromId(id);
+
+        return ResponseEntity.ok(activityDataList);
+    }
+
     @PostMapping("/{id}/invite")
     public ResponseEntity<ParticipantCreateResponse> inviteParticipant(@PathVariable UUID id, @RequestBody ParticipantRequestPayload payload) {
         Optional<Trip> trip = this.repository.findById(id);
@@ -121,4 +129,6 @@ public class TripController {
 
         return ResponseEntity.ok(participantList);
     }
+
+
 }
