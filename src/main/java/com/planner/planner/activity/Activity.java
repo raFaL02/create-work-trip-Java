@@ -1,4 +1,4 @@
-package com.planner.planner.activities;
+package com.planner.planner.activity;
 
 import com.planner.planner.trip.Trip;
 import jakarta.persistence.*;
