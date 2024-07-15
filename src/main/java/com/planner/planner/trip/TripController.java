@@ -1,9 +1,9 @@
 package com.planner.planner.trip;
 
-import com.planner.planner.activities.ActivityData;
-import com.planner.planner.activities.ActivityRequestPayload;
-import com.planner.planner.activities.ActivityResponse;
-import com.planner.planner.activities.ActivityService;
+import com.planner.planner.activity.ActivityData;
+import com.planner.planner.activity.ActivityRequestPayload;
+import com.planner.planner.activity.ActivityResponse;
+import com.planner.planner.activity.ActivityService;
 import com.planner.planner.participant.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
